@@ -19,45 +19,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="M9F-8a-Fak"/>
-                    <connections>
-                        <segue destination="fhq-A9-uxX" kind="show" identifier="segue" id="5SP-yJ-mxU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="980.91603053435108" y="-34.507042253521128"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="AHb-2X-bdb">
-            <objects>
-                <viewController id="fhq-A9-uxX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qje-ME-JMw">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's start planning!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="249-vP-a20">
-                                <rect key="frame" x="74.333333333333329" y="409.66666666666669" width="244.33333333333337" height="33"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bUH-Tc-8U3"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
-                        <constraints>
-                            <constraint firstItem="249-vP-a20" firstAttribute="centerY" secondItem="qje-ME-JMw" secondAttribute="centerY" id="b79-vi-fmr"/>
-                            <constraint firstItem="249-vP-a20" firstAttribute="centerX" secondItem="qje-ME-JMw" secondAttribute="centerX" id="xfe-XX-pfP"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="hWy-Ee-OG9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bkP-1S-DG5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1707.6335877862596" y="-35.211267605633807"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="vKo-fx-zor">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBC-5N-juP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0oq-Uh-euj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MQK-Z9-AO1">
@@ -69,15 +39,11 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Pt-Tr-w58"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cBC-5N-juP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
