@@ -22,12 +22,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnO-kJ-YEc">
+                                <rect key="frame" x="166.66666666666666" y="739.33333333333337" width="59.666666666666657" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <segue destination="W9O-Qg-uGJ" kind="show" id="1Xt-Xb-MDx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
                             <constraint firstItem="xwG-WI-6Wu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KfU-w3-Nxk"/>
+                            <constraint firstItem="ZnO-kJ-YEc" firstAttribute="top" secondItem="xwG-WI-6Wu" secondAttribute="bottom" constant="300" id="np4-yK-VsU"/>
                             <constraint firstItem="xwG-WI-6Wu" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="yaQ-Xb-FBk"/>
+                            <constraint firstItem="ZnO-kJ-YEc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ysb-a8-9r7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="21k-NN-TmZ"/>
@@ -36,16 +46,42 @@
             </objects>
             <point key="canvasLocation" x="961.06870229007632" y="-34.507042253521128"/>
         </scene>
-        <!--View Controller-->
+        <!--Tips View Controller-->
         <scene sceneID="S0v-nk-ybD">
             <objects>
-                <viewController id="W9O-Qg-uGJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TipsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="W9O-Qg-uGJ" customClass="TipsViewController" customModule="mindyPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PsP-jO-P0Y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81K-Cp-VTc">
+                                <rect key="frame" x="174.66666666666666" y="413" width="44" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TL6-y6-Pxl">
+                                <rect key="frame" x="166" y="739.33333333333337" width="61.333333333333343" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <action selector="buttonIsClicked:" destination="W9O-Qg-uGJ" eventType="touchUpInside" id="OBq-ln-mVX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="m4H-IU-uoC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="TL6-y6-Pxl" firstAttribute="top" secondItem="81K-Cp-VTc" secondAttribute="bottom" constant="300" id="Gi5-FZ-WsX"/>
+                            <constraint firstItem="TL6-y6-Pxl" firstAttribute="centerX" secondItem="PsP-jO-P0Y" secondAttribute="centerX" id="Rac-fv-Jtb"/>
+                            <constraint firstItem="81K-Cp-VTc" firstAttribute="centerY" secondItem="PsP-jO-P0Y" secondAttribute="centerY" id="bts-wg-KaX"/>
+                            <constraint firstItem="81K-Cp-VTc" firstAttribute="centerX" secondItem="PsP-jO-P0Y" secondAttribute="centerX" id="e1W-Yf-CHv"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Rg5-2y-qSr"/>
+                    <connections>
+                        <outlet property="startButton" destination="TL6-y6-Pxl" id="2KL-25-biD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSj-vl-tEK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,11 +107,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
