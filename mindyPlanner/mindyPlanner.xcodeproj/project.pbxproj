@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		227287072995B5FC00F87CC5 /* IntroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227287062995B5FC00F87CC5 /* IntroStoryboard.storyboard */; };
 		2272870B2995BA8200F87CC5 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2272870A2995BA8200F87CC5 /* TipsViewController.swift */; };
-		2272870E2995BCB100F87CC5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2272870D2995BCB100F87CC5 /* HomeViewController.swift */; };
-		227287102995BCD100F87CC5 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2272870F2995BCD100F87CC5 /* HomeStoryboard.storyboard */; };
+		2272870E2995BCB100F87CC5 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2272870D2995BCB100F87CC5 /* CalendarViewController.swift */; };
+		227287102995BCD100F87CC5 /* CalendarStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2272870F2995BCD100F87CC5 /* CalendarStoryboard.storyboard */; };
+		227287132996E82400F87CC5 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 227287122996E82400F87CC5 /* HorizonCalendar */; };
+		227287162997083100F87CC5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227287152997083100F87CC5 /* TabBarController.swift */; };
 		227AD72A29941B9700125CE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD72929941B9700125CE2 /* AppDelegate.swift */; };
 		227AD72C29941B9700125CE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD72B29941B9700125CE2 /* SceneDelegate.swift */; };
 		227AD72E29941B9700125CE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD72D29941B9700125CE2 /* ViewController.swift */; };
@@ -21,6 +23,7 @@
 		227AD74B29941B9800125CE2 /* mindyPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD74A29941B9800125CE2 /* mindyPlannerUITests.swift */; };
 		227AD74D29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD74C29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift */; };
 		22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22976DEA2995000A00DFCE12 /* IntroViewController.swift */; };
+		22F3751F2997291F006862F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3751E2997291F006862F0 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +46,9 @@
 /* Begin PBXFileReference section */
 		227287062995B5FC00F87CC5 /* IntroStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroStoryboard.storyboard; sourceTree = "<group>"; };
 		2272870A2995BA8200F87CC5 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
-		2272870D2995BCB100F87CC5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2272870F2995BCD100F87CC5 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		2272870D2995BCB100F87CC5 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		2272870F2995BCD100F87CC5 /* CalendarStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarStoryboard.storyboard; sourceTree = "<group>"; };
+		227287152997083100F87CC5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		227AD72629941B9700125CE2 /* mindyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227AD72929941B9700125CE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		227AD72B29941B9700125CE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 		227AD74A29941B9800125CE2 /* mindyPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindyPlannerUITests.swift; sourceTree = "<group>"; };
 		227AD74C29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindyPlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		22976DEA2995000A00DFCE12 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		22F3751E2997291F006862F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227287132996E82400F87CC5 /* HorizonCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		227287142997081800F87CC5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				227287152997083100F87CC5 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		227AD71D29941B9700125CE2 = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +123,13 @@
 		227AD72829941B9700125CE2 /* mindyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				22F3752029972F04006862F0 /* Calendar */,
+				22F3751D2997290A006862F0 /* Settings */,
+				227287142997081800F87CC5 /* TabBar */,
 				22976DF02995B51800DFCE12 /* Introduction */,
-				2272870F2995BCD100F87CC5 /* HomeStoryboard.storyboard */,
-				2272870D2995BCB100F87CC5 /* HomeViewController.swift */,
-				227AD73429941B9800125CE2 /* LaunchScreen.storyboard */,
 				227AD72F29941B9700125CE2 /* Main.storyboard */,
 				227AD72D29941B9700125CE2 /* ViewController.swift */,
+				227AD73429941B9800125CE2 /* LaunchScreen.storyboard */,
 				227AD72929941B9700125CE2 /* AppDelegate.swift */,
 				227AD72B29941B9700125CE2 /* SceneDelegate.swift */,
 				227AD73229941B9800125CE2 /* Assets.xcassets */,
@@ -150,6 +165,23 @@
 			path = Introduction;
 			sourceTree = "<group>";
 		};
+		22F3751D2997290A006862F0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				22F3751E2997291F006862F0 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		22F3752029972F04006862F0 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				2272870F2995BCD100F87CC5 /* CalendarStoryboard.storyboard */,
+				2272870D2995BCB100F87CC5 /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +198,9 @@
 			dependencies = (
 			);
 			name = mindyPlanner;
+			packageProductDependencies = (
+				227287122996E82400F87CC5 /* HorizonCalendar */,
+			);
 			productName = mindyPlanner;
 			productReference = 227AD72629941B9700125CE2 /* mindyPlanner.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +273,9 @@
 				Base,
 			);
 			mainGroup = 227AD71D29941B9700125CE2;
+			packageReferences = (
+				227287112996E82400F87CC5 /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
+			);
 			productRefGroup = 227AD72729941B9700125CE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -255,7 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				227AD73629941B9800125CE2 /* LaunchScreen.storyboard in Resources */,
-				227287102995BCD100F87CC5 /* HomeStoryboard.storyboard in Resources */,
+				227287102995BCD100F87CC5 /* CalendarStoryboard.storyboard in Resources */,
 				227AD73329941B9800125CE2 /* Assets.xcassets in Resources */,
 				227287072995B5FC00F87CC5 /* IntroStoryboard.storyboard in Resources */,
 				227AD73129941B9700125CE2 /* Main.storyboard in Resources */,
@@ -287,8 +325,10 @@
 				2272870B2995BA8200F87CC5 /* TipsViewController.swift in Sources */,
 				227AD72A29941B9700125CE2 /* AppDelegate.swift in Sources */,
 				227AD72C29941B9700125CE2 /* SceneDelegate.swift in Sources */,
+				227287162997083100F87CC5 /* TabBarController.swift in Sources */,
 				22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */,
-				2272870E2995BCB100F87CC5 /* HomeViewController.swift in Sources */,
+				2272870E2995BCB100F87CC5 /* CalendarViewController.swift in Sources */,
+				22F3751F2997291F006862F0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +680,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		227287112996E82400F87CC5 /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		227287122996E82400F87CC5 /* HorizonCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 227287112996E82400F87CC5 /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
+			productName = HorizonCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 227AD71E29941B9700125CE2 /* Project object */;
 }

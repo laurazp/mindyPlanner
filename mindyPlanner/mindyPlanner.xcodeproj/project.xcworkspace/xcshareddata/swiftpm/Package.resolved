@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "horizoncalendar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/HorizonCalendar.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "fd9ef9ca8a6c4f6292ece8dcc0461b45827dccac"
+      }
+    }
+  ],
+  "version" : 2
+}
