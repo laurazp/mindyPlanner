@@ -12,8 +12,8 @@ class TipsViewController: UIViewController {
     }
     
     @IBAction func buttonIsClicked(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
             //viewController.title = "Home"
             viewController.navigationItem.setHidesBackButton(true, animated: true)
             self.navigationController?.pushViewController(viewController, animated: true)
