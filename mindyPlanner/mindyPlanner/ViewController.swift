@@ -11,9 +11,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(imageView)
+        //view.addSubview(imageView)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        
+        
+        /*DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             //self.performSegue(withIdentifier: "segue", sender: self)
             let storyboard = UIStoryboard(name: "IntroStoryboard", bundle: nil)
             if let viewController = storyboard.instantiateViewController(withIdentifier: "IntroViewController") as? IntroViewController {
@@ -21,10 +23,10 @@ class ViewController: UIViewController {
                 viewController.navigationItem.setHidesBackButton(true, animated: true)
                 self.navigationController?.pushViewController(viewController, animated: true)
             }
-        }
+        }*/
     }
 
-    override func viewDidLayoutSubviews() {
+    /*override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         imageView.center = view.center
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -41,5 +43,5 @@ class ViewController: UIViewController {
             self.imageView.frame = CGRect(x: -(xPosition/2), y: yPosition/2, width: size, height: size)
             self.imageView.alpha = 0
         }
-    }
+    }*/
 }
