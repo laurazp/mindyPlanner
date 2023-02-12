@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0oq-Uh-euj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n0i-Pk-e3h">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -65,39 +65,21 @@
             </objects>
             <point key="canvasLocation" x="1907.6335877862596" y="-34.507042253521128"/>
         </scene>
-        <!--Calendar-->
+        <!--Calendar View Controller-->
         <scene sceneID="2uZ-wK-vvj">
             <objects>
-                <viewController id="36r-Xs-IIj" customClass="CalendarViewController" customModule="mindyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="36r-Xs-IIj" customClass="CalendarViewController" customModule="mindyPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qEB-Ai-9uY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="8tT-cR-zyr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="V36-0O-OIY"/>
+                    <navigationItem key="navigationItem" id="w6X-Eo-4Ul"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKb-ES-ndS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1908" y="743"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="vKo-fx-zor">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0oq-Uh-euj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MQK-Z9-AO1">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="n0i-Pk-e3h" kind="relationship" relationship="rootViewController" id="0Pt-Tr-w58"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cBC-5N-juP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="2834.3511450381679" y="742.95774647887333"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L9y-aD-0z9">
@@ -106,18 +88,38 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="b0p-h6-bh8"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tkq-PA-u6X">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wx4-t5-Bln"/>
-                        <segue destination="36r-Xs-IIj" kind="relationship" relationship="viewControllers" id="mNm-xb-bhg"/>
+                        <segue destination="gqh-IK-A3z" kind="relationship" relationship="viewControllers" id="mNm-xb-bhg"/>
                         <segue destination="g76-we-QbH" kind="relationship" relationship="viewControllers" id="6pf-wq-WyI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eje-Q0-Ltv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="980.91603053435108" y="-34.507042253521128"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="IGi-mE-lbg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqh-IK-A3z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="V36-0O-OIY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2fp-4A-NqR">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="36r-Xs-IIj" kind="relationship" relationship="rootViewController" id="uIG-t6-tv0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uro-un-hdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1907.6335877862596" y="742.95774647887333"/>
         </scene>
     </scenes>
     <resources>
