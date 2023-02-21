@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSRemindersUsageDescription</key>
-	<string>Please allow access to Calendars to be able to add Reminders</string>
+	<string>Please allow access to Calendars to be able to add Reminders to your Calendar</string>
 	<key>NSCalendarsUsageDescription</key>
-	<string>Please allow access to Calendars to be able to add Events</string>
+	<string>Please allow access to Calendars to be able to add Events to your Calendar</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

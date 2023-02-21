@@ -24,6 +24,8 @@
 		227AD74D29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD74C29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift */; };
 		22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22976DEA2995000A00DFCE12 /* IntroViewController.swift */; };
 		22F3751F2997291F006862F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3751E2997291F006862F0 /* SettingsViewController.swift */; };
+		22F5079329A4FF06009653A3 /* CalendarEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5079129A4FF06009653A3 /* CalendarEventCell.swift */; };
+		22F5079429A4FF06009653A3 /* CalendarEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F5079229A4FF06009653A3 /* CalendarEventCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		227AD74C29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindyPlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		22976DEA2995000A00DFCE12 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		22F3751E2997291F006862F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		22F5079129A4FF06009653A3 /* CalendarEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventCell.swift; sourceTree = "<group>"; };
+		22F5079229A4FF06009653A3 /* CalendarEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarEventCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 			children = (
 				2272870F2995BCD100F87CC5 /* CalendarStoryboard.storyboard */,
 				2272870D2995BCB100F87CC5 /* CalendarViewController.swift */,
+				22F5079129A4FF06009653A3 /* CalendarEventCell.swift */,
+				22F5079229A4FF06009653A3 /* CalendarEventCell.xib */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 				227AD73629941B9800125CE2 /* LaunchScreen.storyboard in Resources */,
 				227287102995BCD100F87CC5 /* CalendarStoryboard.storyboard in Resources */,
 				227AD73329941B9800125CE2 /* Assets.xcassets in Resources */,
+				22F5079429A4FF06009653A3 /* CalendarEventCell.xib in Resources */,
 				227287072995B5FC00F87CC5 /* IntroStoryboard.storyboard in Resources */,
 				227AD73129941B9700125CE2 /* Main.storyboard in Resources */,
 			);
@@ -328,6 +335,7 @@
 				227287162997083100F87CC5 /* TabBarController.swift in Sources */,
 				22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */,
 				2272870E2995BCB100F87CC5 /* CalendarViewController.swift in Sources */,
+				22F5079329A4FF06009653A3 /* CalendarEventCell.swift in Sources */,
 				22F3751F2997291F006862F0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

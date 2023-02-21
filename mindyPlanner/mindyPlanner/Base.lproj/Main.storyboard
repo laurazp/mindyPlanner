@@ -72,10 +72,43 @@
                     <view key="view" contentMode="scaleToFill" id="qEB-Ai-9uY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p1p-Ac-rkR">
+                                <rect key="frame" x="0.0" y="123" width="393" height="626"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulm-E9-VAD" userLabel="Calendar View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="Wgs-0v-UhH"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gfx-Hf-Trh">
+                                        <rect key="frame" x="0.0" y="350" width="393" height="276"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gfx-Hf-Trh" secondAttribute="trailing" constant="10" id="1o9-tK-0U2"/>
+                                    <constraint firstItem="gfx-Hf-Trh" firstAttribute="leading" secondItem="p1p-Ac-rkR" secondAttribute="leading" constant="10" id="G0N-yT-wl0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8tT-cR-zyr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p1p-Ac-rkR" firstAttribute="leading" secondItem="8tT-cR-zyr" secondAttribute="leading" id="Br7-TS-dTl"/>
+                            <constraint firstItem="p1p-Ac-rkR" firstAttribute="top" secondItem="8tT-cR-zyr" secondAttribute="top" constant="20" id="FXH-tH-LtU"/>
+                            <constraint firstItem="8tT-cR-zyr" firstAttribute="trailing" secondItem="p1p-Ac-rkR" secondAttribute="trailing" id="KV2-y3-iLS"/>
+                            <constraint firstItem="8tT-cR-zyr" firstAttribute="bottom" secondItem="p1p-Ac-rkR" secondAttribute="bottom" constant="20" id="xAa-SV-U04"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="w6X-Eo-4Ul"/>
+                    <connections>
+                        <outlet property="calendarBackView" destination="ulm-E9-VAD" id="IYn-RJ-c1b"/>
+                        <outlet property="stackView" destination="p1p-Ac-rkR" id="oWk-sf-hXN"/>
+                        <outlet property="tableView" destination="gfx-Hf-Trh" id="YDS-0e-K8v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKb-ES-ndS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,6 +164,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
