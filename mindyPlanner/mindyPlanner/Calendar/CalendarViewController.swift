@@ -149,6 +149,14 @@ extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSin
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "EventDetailStoryboard", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "EventDetailViewController") as? EventDetailViewController {
+            viewController.title = "Event details"
+            navigationController?.pushViewController(viewController, animated: true) // Navegacion
+        }
+    }
+    
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
         searchForEvents(selectedDate: (dateComponents?.date)!)
     }
