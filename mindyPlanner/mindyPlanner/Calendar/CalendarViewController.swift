@@ -61,17 +61,7 @@ class CalendarViewController: UIViewController {
         
         stackView.addSubview(tableView)
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//            super.viewDidAppear(animated)
-//            //Hide keyboard
-//            self.view.endEditing(true)
-//    }
-    
-    @IBAction func addToCalendar(sender: AnyObject) {
-        
-    }
-    
+     
     @objc func didTapAddButton() {
         eventStore.requestAccess(to: .event) { [weak self] success, error in
             if success, error == nil {
@@ -82,6 +72,7 @@ class CalendarViewController: UIViewController {
                     eventViewController.editViewDelegate = self
                     
                     let newEvent = EKEvent(eventStore: store)
+                    //TODO: Change date depending on selected date from user
                     newEvent.startDate = Date()
                     newEvent.endDate = Date()
                      //Save the event
@@ -126,8 +117,6 @@ class CalendarViewController: UIViewController {
         let predicate: NSPredicate? = eventStore.predicateForEvents(withStart: selectedDate, end: dayAfter, calendars: nil)
         var events: [EKEvent]? = [EKEvent]()
         
-        
-        
         if let aPredicate = predicate {
             do {
                 try self.eventStore.commit()
@@ -136,18 +125,10 @@ class CalendarViewController: UIViewController {
                 print ("An error occured \(err.description)")
             }
         }
-        
-//        do {
-//            try self.eventStore.commit()
-//        } catch let err as NSError {
-//            print ("An error occured \(err.description)")
-//        }
-        
+
         if events == [] {
-            print("-------------------- false ---------------------")
             dayHasEvents = false
         } else {
-            print("-------------------- true ---------------------")
             dayHasEvents = true
         }
         return dayHasEvents
@@ -173,9 +154,7 @@ extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSin
     }
     
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-        
-        
-        
+                
         //TODO: Add image for days with events
         let dayHasEvents = dayHasEvents(selectedDate: dateComponents.date ?? Date())
         if dayHasEvents {
@@ -186,21 +165,6 @@ extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSin
         } else {
             return nil
         }
-        
-        
-
-//        switch database.eventType(on: dateComponents) {
-//            case .none:
-//                return nil
-//            case .busy:
-//                return .default()
-//            case .travel:
-//                return .image(airplaneImage, color: .systemOrange)
-//            case .party:
-//                return .customView {
-//                    MyPartyEmojiLabel()
-//                }
-//            }
     }
     
     func eventViewController(_ controller: EKEventViewController, didCompleteWith action: EKEventViewAction) {
@@ -213,10 +177,5 @@ extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSin
     
     func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        //Update calendar and decorations when data has changed
-        //calendarView.reloadDecorations(forDateComponents: dateComponents, animated: true)
     }
 }
