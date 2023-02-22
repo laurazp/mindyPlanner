@@ -7,14 +7,11 @@ class CalendarViewController: UIViewController {
     
     let calendarView = UICalendarView()
     let eventStore = EKEventStore()
+    var calendarEventsData = [String]()
     //var eventController = EKEventEditViewController()
     @IBOutlet weak var calendarBackView: UIView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var tableView: UITableView!
-    
-    //TEST --> DELETE !!
-    var calendarEventsData = ["Event 1","Event 2","Event 3"]
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +38,8 @@ class CalendarViewController: UIViewController {
         calendarView.layer.cornerRadius = 20
         calendarView.tintColor = UIColor.systemTeal
         calendarView.wantsDateDecorations = false
+        let dateSelection = UICalendarSelectionSingleDate(delegate: self)
+        calendarView.selectionBehavior = dateSelection
         
         calendarBackView.addSubview(calendarView)
                 
@@ -65,11 +64,11 @@ class CalendarViewController: UIViewController {
         stackView.addSubview(tableView)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-            super.viewDidAppear(animated)
-            //Hide keyboard
-            self.view.endEditing(true)
-        }
+//    override func viewDidAppear(_ animated: Bool) {
+//            super.viewDidAppear(animated)
+//            //Hide keyboard
+//            self.view.endEditing(true)
+//    }
     
     @IBAction func addToCalendar(sender: AnyObject) {
         
@@ -80,47 +79,46 @@ class CalendarViewController: UIViewController {
             if success, error == nil {
                 DispatchQueue.main.async {
                     guard let store = self?.eventStore else { return }
-                    //self?.eventController.editViewDelegate = self
                     let eventViewController = EKEventEditViewController()
                     eventViewController.eventStore = store
                     eventViewController.editViewDelegate = self
                     
-//                    eventViewController.addObserver(forName: NSNotification.Name(rawValue: "EKEventStoreChangedNotification"), object: store, queue: updateQueue) {
-//                                notification in
-//
-//                            if ignoreEKEventStoreChangedNotification {
-//                                ignoreEKEventStoreChangedNotification = false
-//                                return
-//                            }
-//
-//                            // Rest of your code here.
-//
-//                    }
-                    
                     let newEvent = EKEvent(eventStore: store)
                     newEvent.startDate = Date()
                     newEvent.endDate = Date()
-            
                      //Save the event
-                     do {
-                         try store.save(newEvent, span: .thisEvent, commit: true)
-                         //TODO: Add event to data list
-                         self?.calendarEventsData.append(newEvent.title)
-                     } catch let err as NSError{
-                         print ("An error occured \(err.description)")
-                     }
-        
-                    
-                    
+                    do {
+                        try store.save(newEvent, span: .thisEvent, commit: true)
+                        //TODO: TableView se debería actualizar al añadir un evento !!
+                         
+                    } catch let err as NSError{
+                        print ("An error occured \(err.description)")
+                    }
                     eventViewController.event = newEvent
                     self?.present(eventViewController, animated: true, completion: nil)
-//                    let eventViewController = EKEventViewController()
-//                    eventViewController.delegate = self
-//                    eventViewController.event = newEvent
-//                    let navigationController = UINavigationController(rootViewController: eventViewController)
-//                    self?.present(navigationController, animated: true)
                 }
             }
+        }
+    }
+    
+    func searchForEvents(selectedDate: Date) {
+        self.calendarEventsData.removeAll()
+        let dayAfter = Calendar.current.date(byAdding: .day, value: 1, to: selectedDate)!
+        var predicate: NSPredicate? = nil
+        predicate = eventStore.predicateForEvents(withStart: selectedDate, end: dayAfter, calendars: nil)
+        
+        if let aPredicate = predicate {
+            do {
+                try self.eventStore.commit()
+                eventStore.enumerateEvents(matching: aPredicate){ (event, stop) in
+                    if event != nil {
+                        self.calendarEventsData.append(event.title)
+                    }
+                }
+            } catch let err as NSError{
+                print ("An error occured \(err.description)")
+            }
+            self.tableView.reloadData()
         }
     }
 }
@@ -139,18 +137,14 @@ extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSin
         return cell
     }
     
-    
-    func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
-        //TODO: Mostrar eventos del día al hacer click
-        
+        searchForEvents(selectedDate: (dateComponents?.date)!)
     }
     
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
+        
+        //TODO: Add image for days with events
+        
         //let font = UIFont.systemFont(ofSize: 10)
         //let configuration = UIImage.SymbolConfiguration(font: font)
         //let image = UIImage(systemName: "star.fill", withConfiguration: configuration)?.withRenderingMode(.alwaysOriginal)
@@ -179,9 +173,12 @@ extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSin
 //        }
     }
     
+    func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         //Update calendar and decorations when data has changed
         //calendarView.reloadDecorations(forDateComponents: dateComponents, animated: true)
-        
     }
 }
