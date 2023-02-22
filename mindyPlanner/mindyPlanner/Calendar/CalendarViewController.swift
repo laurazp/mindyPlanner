@@ -28,7 +28,7 @@ class CalendarViewController: UIViewController {
     
     private func createCalendar() {
         calendarView.translatesAutoresizingMaskIntoConstraints = false
-        calendarView.calendar = .current
+        calendarView.calendar = Calendar(identifier: .gregorian)
         calendarView.locale = .current
         calendarView.fontDesign = .rounded
         calendarView.delegate = self
@@ -37,9 +37,7 @@ class CalendarViewController: UIViewController {
         calendarView.layer.cornerCurve = .continuous
         calendarView.layer.cornerRadius = 20
         calendarView.tintColor = UIColor.systemTeal
-        calendarView.wantsDateDecorations = false
-        let dateSelection = UICalendarSelectionSingleDate(delegate: self)
-        calendarView.selectionBehavior = dateSelection
+        //calendarView.wantsDateDecorations = false
         
         calendarBackView.addSubview(calendarView)
                 
@@ -121,6 +119,39 @@ class CalendarViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    func dayHasEvents(selectedDate: Date) -> Bool {
+        var dayHasEvents: Bool
+        let dayAfter = Calendar.current.date(byAdding: .day, value: 1, to: selectedDate)!
+        let predicate: NSPredicate? = eventStore.predicateForEvents(withStart: selectedDate, end: dayAfter, calendars: nil)
+        var events: [EKEvent]? = [EKEvent]()
+        
+        
+        
+        if let aPredicate = predicate {
+            do {
+                try self.eventStore.commit()
+                events = eventStore.events(matching: aPredicate)
+            } catch let err as NSError{
+                print ("An error occured \(err.description)")
+            }
+        }
+        
+//        do {
+//            try self.eventStore.commit()
+//        } catch let err as NSError {
+//            print ("An error occured \(err.description)")
+//        }
+        
+        if events == [] {
+            print("-------------------- false ---------------------")
+            dayHasEvents = false
+        } else {
+            print("-------------------- true ---------------------")
+            dayHasEvents = true
+        }
+        return dayHasEvents
+    }
 }
 
 extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate, EKEventViewDelegate, EKEventEditViewDelegate, UITableViewDelegate, UITableViewDataSource {
@@ -143,12 +174,20 @@ extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSin
     
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
         
-        //TODO: Add image for days with events
         
-        //let font = UIFont.systemFont(ofSize: 10)
-        //let configuration = UIImage.SymbolConfiguration(font: font)
-        //let image = UIImage(systemName: "star.fill", withConfiguration: configuration)?.withRenderingMode(.alwaysOriginal)
-        //return .image(image)
+        
+        //TODO: Add image for days with events
+        let dayHasEvents = dayHasEvents(selectedDate: dateComponents.date ?? Date())
+        if dayHasEvents {
+            let font = UIFont.systemFont(ofSize: 10)
+            let configuration = UIImage.SymbolConfiguration(font: font)
+            let image = UIImage(systemName: "star.fill", withConfiguration: configuration)?.withRenderingMode(.alwaysOriginal)
+            return .image(image)
+        } else {
+            return nil
+        }
+        
+        
 
 //        switch database.eventType(on: dateComponents) {
 //            case .none:
@@ -162,7 +201,6 @@ extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSin
 //                    MyPartyEmojiLabel()
 //                }
 //            }
-        return .default()
     }
     
     func eventViewController(_ controller: EKEventViewController, didCompleteWith action: EKEventViewAction) {
