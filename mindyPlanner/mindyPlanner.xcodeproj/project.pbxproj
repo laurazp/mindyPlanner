@@ -28,6 +28,8 @@
 		22F5079429A4FF06009653A3 /* CalendarEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F5079229A4FF06009653A3 /* CalendarEventCell.xib */; };
 		22F5079829A67E08009653A3 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5079729A67E08009653A3 /* EventDetailViewController.swift */; };
 		22F5079A29A67E1A009653A3 /* EventDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5079929A67E1A009653A3 /* EventDetailStoryboard.storyboard */; };
+		22F5079D29A6A4BE009653A3 /* dandelion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F5079C29A6A4BE009653A3 /* dandelion.jpg */; };
+		22F507A029A6AB7D009653A3 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5079F29A6AB7D009653A3 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		22F5079229A4FF06009653A3 /* CalendarEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarEventCell.xib; sourceTree = "<group>"; };
 		22F5079729A67E08009653A3 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		22F5079929A67E1A009653A3 /* EventDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		22F5079C29A6A4BE009653A3 /* dandelion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dandelion.jpg; sourceTree = "<group>"; };
+		22F5079F29A6AB7D009653A3 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 		227AD72829941B9700125CE2 /* mindyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				22F5079E29A6AB61009653A3 /* Dashboard */,
+				22F5079B29A6A446009653A3 /* images */,
 				22F3752029972F04006862F0 /* Calendar */,
 				22F3751D2997290A006862F0 /* Settings */,
 				227287142997081800F87CC5 /* TabBar */,
@@ -208,6 +214,22 @@
 				22F5079929A67E1A009653A3 /* EventDetailStoryboard.storyboard */,
 			);
 			path = EventDetail;
+			sourceTree = "<group>";
+		};
+		22F5079B29A6A446009653A3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				22F5079C29A6A4BE009653A3 /* dandelion.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		22F5079E29A6AB61009653A3 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				22F5079F29A6AB7D009653A3 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +344,7 @@
 			files = (
 				227AD73629941B9800125CE2 /* LaunchScreen.storyboard in Resources */,
 				227287102995BCD100F87CC5 /* CalendarStoryboard.storyboard in Resources */,
+				22F5079D29A6A4BE009653A3 /* dandelion.jpg in Resources */,
 				227AD73329941B9800125CE2 /* Assets.xcassets in Resources */,
 				22F5079429A4FF06009653A3 /* CalendarEventCell.xib in Resources */,
 				22F5079A29A67E1A009653A3 /* EventDetailStoryboard.storyboard in Resources */,
@@ -359,6 +382,7 @@
 				22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */,
 				22F5079829A67E08009653A3 /* EventDetailViewController.swift in Sources */,
 				2272870E2995BCB100F87CC5 /* CalendarViewController.swift in Sources */,
+				22F507A029A6AB7D009653A3 /* DashboardViewController.swift in Sources */,
 				22F5079329A4FF06009653A3 /* CalendarEventCell.swift in Sources */,
 				22F3751F2997291F006862F0 /* SettingsViewController.swift in Sources */,
 			);

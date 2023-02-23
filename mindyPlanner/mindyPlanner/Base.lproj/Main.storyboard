@@ -36,34 +36,57 @@
             </objects>
             <point key="canvasLocation" x="1908" y="-748"/>
         </scene>
-        <!--Main-->
+        <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mindyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="mindyPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXZ-ZJ-yCv">
-                                <rect key="frame" x="173.66666666666666" y="414" width="45.666666666666657" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cbm-tr-Hdf">
+                                <rect key="frame" x="20" y="123" width="353" height="606"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ZV-A8-gVW" userLabel="imageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="250"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dandelion.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0qm-02-7GX">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="250"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="0qm-02-7GX" secondAttribute="trailing" id="Cvo-Rh-ph1"/>
+                                            <constraint firstAttribute="height" constant="250" id="UMI-uH-IxX"/>
+                                            <constraint firstItem="0qm-02-7GX" firstAttribute="leading" secondItem="8ZV-A8-gVW" secondAttribute="leading" id="adv-fB-tPI"/>
+                                            <constraint firstAttribute="bottom" secondItem="0qm-02-7GX" secondAttribute="bottom" id="g2s-hE-C0r"/>
+                                            <constraint firstItem="0qm-02-7GX" firstAttribute="top" secondItem="8ZV-A8-gVW" secondAttribute="top" id="hRu-Sq-Zql"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8G-Nq-XNd">
+                                        <rect key="frame" x="0.0" y="250" width="353" height="356"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="c8G-Nq-XNd" firstAttribute="top" secondItem="8ZV-A8-gVW" secondAttribute="bottom" id="AHL-zJ-7SP"/>
+                                    <constraint firstItem="8ZV-A8-gVW" firstAttribute="centerX" secondItem="cbm-tr-Hdf" secondAttribute="centerX" id="Bqp-Io-3yL"/>
+                                    <constraint firstItem="c8G-Nq-XNd" firstAttribute="centerX" secondItem="cbm-tr-Hdf" secondAttribute="centerX" id="Yvj-kZ-bNN"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vXZ-ZJ-yCv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2CJ-Do-bNf"/>
-                            <constraint firstItem="vXZ-ZJ-yCv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mNT-LT-AFQ"/>
+                            <constraint firstItem="cbm-tr-Hdf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3Rm-7Y-9Xu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cbm-tr-Hdf" secondAttribute="trailing" constant="20" id="VX4-kM-zDU"/>
+                            <constraint firstItem="cbm-tr-Hdf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gUf-V2-HvR"/>
+                            <constraint firstItem="cbm-tr-Hdf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vVh-K9-0pu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" image="house" catalog="system" id="ypj-OP-yit"/>
                     <navigationItem key="navigationItem" id="M9F-8a-Fak"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1907.6335877862596" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="2834.3511450381679" y="-34.507042253521128"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="2uZ-wK-vvj">
@@ -126,7 +149,7 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wx4-t5-Bln"/>
+                        <segue destination="p8e-GJ-ryq" kind="relationship" relationship="viewControllers" id="wx4-t5-Bln"/>
                         <segue destination="gqh-IK-A3z" kind="relationship" relationship="viewControllers" id="mNm-xb-bhg"/>
                         <segue destination="g76-we-QbH" kind="relationship" relationship="viewControllers" id="6pf-wq-WyI"/>
                     </connections>
@@ -154,11 +177,34 @@
             </objects>
             <point key="canvasLocation" x="1907.6335877862596" y="742.95774647887333"/>
         </scene>
+        <!--Main-->
+        <scene sceneID="BUV-eu-Ovb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p8e-GJ-ryq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Main" image="house" catalog="system" id="ypj-OP-yit"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LvT-V1-0cq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yHM-dB-2s8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJi-kj-d6U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1907.6335877862596" y="-34.507042253521128"/>
+        </scene>
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="dandelion.jpg" width="4000" height="2667"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="wrench.and.screwdriver" catalog="system" width="128" height="119"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
