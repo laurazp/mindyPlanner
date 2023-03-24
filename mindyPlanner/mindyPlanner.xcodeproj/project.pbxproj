@@ -25,6 +25,8 @@
 		227AD74129941B9800125CE2 /* mindyPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD74029941B9800125CE2 /* mindyPlannerTests.swift */; };
 		227AD74B29941B9800125CE2 /* mindyPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD74A29941B9800125CE2 /* mindyPlannerUITests.swift */; };
 		227AD74D29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD74C29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift */; };
+		2292625D29CE2E8F00DBD640 /* cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292625B29CE2E8F00DBD640 /* cake.png */; };
+		2292625E29CE2E8F00DBD640 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292625C29CE2E8F00DBD640 /* add.png */; };
 		22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22976DEA2995000A00DFCE12 /* IntroViewController.swift */; };
 		22D7C1FE29CDD7CF00D36237 /* RemindersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7C1FD29CDD7CF00D36237 /* RemindersCell.swift */; };
 		22F3751F2997291F006862F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3751E2997291F006862F0 /* SettingsViewController.swift */; };
@@ -75,6 +77,8 @@
 		227AD74629941B9800125CE2 /* mindyPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mindyPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		227AD74A29941B9800125CE2 /* mindyPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindyPlannerUITests.swift; sourceTree = "<group>"; };
 		227AD74C29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindyPlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2292625B29CE2E8F00DBD640 /* cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cake.png; sourceTree = "<group>"; };
+		2292625C29CE2E8F00DBD640 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		22976DEA2995000A00DFCE12 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		22D7C1FD29CDD7CF00D36237 /* RemindersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersCell.swift; sourceTree = "<group>"; };
 		22F3751E2997291F006862F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 		22F5079B29A6A446009653A3 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2292625C29CE2E8F00DBD640 /* add.png */,
+				2292625B29CE2E8F00DBD640 /* cake.png */,
 				22F5079C29A6A4BE009653A3 /* dandelion.jpg */,
 				2267E3CE29CA2AD900A2919D /* plants.jpg */,
 				2267E3CD29CA2AD900A2919D /* sunset.jpg */,
@@ -373,6 +379,7 @@
 				227AD73629941B9800125CE2 /* LaunchScreen.storyboard in Resources */,
 				2267E3D029CA2AD900A2919D /* plants.jpg in Resources */,
 				227287102995BCD100F87CC5 /* CalendarStoryboard.storyboard in Resources */,
+				2292625E29CE2E8F00DBD640 /* add.png in Resources */,
 				22F5079D29A6A4BE009653A3 /* dandelion.jpg in Resources */,
 				2267E3CF29CA2AD900A2919D /* sunset.jpg in Resources */,
 				227AD73329941B9800125CE2 /* Assets.xcassets in Resources */,
@@ -380,6 +387,7 @@
 				22F5079A29A67E1A009653A3 /* EventDetailStoryboard.storyboard in Resources */,
 				227287072995B5FC00F87CC5 /* IntroStoryboard.storyboard in Resources */,
 				227AD73129941B9700125CE2 /* Main.storyboard in Resources */,
+				2292625D29CE2E8F00DBD640 /* cake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
