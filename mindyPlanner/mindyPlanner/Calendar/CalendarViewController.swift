@@ -161,19 +161,19 @@ extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSin
         searchForEvents(selectedDate: (dateComponents?.date)!)
     }
     
-    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-                
-        //TODO: Add image for days with events
-        let dayHasEvents = dayHasEvents(selectedDate: dateComponents.date ?? Date())
-        if dayHasEvents {
-            let font = UIFont.systemFont(ofSize: 10)
-            let configuration = UIImage.SymbolConfiguration(font: font)
-            let image = UIImage(systemName: "star.fill", withConfiguration: configuration)?.withRenderingMode(.alwaysOriginal)
-            return .image(image)
-        } else {
-            return nil
-        }
-    }
+//    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
+//                
+//        //TODO: Add image for days with events
+//        let dayHasEvents = dayHasEvents(selectedDate: dateComponents.date ?? Date())
+//        if dayHasEvents {
+//            let font = UIFont.systemFont(ofSize: 10)
+//            let configuration = UIImage.SymbolConfiguration(font: font)
+//            let image = UIImage(systemName: "star.fill", withConfiguration: configuration)?.withRenderingMode(.alwaysOriginal)
+//            return .image(image)
+//        } else {
+//            return nil
+//        }
+//    }
     
     func eventViewController(_ controller: EKEventViewController, didCompleteWith action: EKEventViewAction) {
         controller.dismiss(animated: true, completion: nil)
