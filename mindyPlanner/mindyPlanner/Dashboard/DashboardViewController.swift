@@ -5,7 +5,7 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var remindersTableView: UITableView!
     @IBOutlet weak var addReminderButton: UIButton!
-    var remindersList: [String] = ["Test1", "Test2", "Test3"]
+    var remindersList: [String] = ["Cumpleaños María", "Aniversario papis", "Renovar DNI"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class DashboardViewController: UIViewController {
     private func setupButton() {
         addReminderButton.layer.cornerRadius = addReminderButton.frame.width / 2
         addReminderButton.clipsToBounds = true
-        addReminderButton.setImage(UIImage(named:"thumbsUp.png"), for: .normal)
+        addReminderButton.setImage(UIImage(named: "add.png"), for: .normal)
         addReminderButton.backgroundColor = .white
         addReminderButton.addTarget(self, action: #selector(addReminderButtonPressed), for: .touchUpInside)
     }
@@ -38,7 +38,8 @@ class DashboardViewController: UIViewController {
     
     private func configureCell(cell: RemindersCell, indexPath: IndexPath) {
         cell.remindersTitleLabel.text = remindersList[indexPath.row]
-        print(remindersList[indexPath.row])
+        //TODO: Change icons depending on "Type" of reminder
+        cell.remindersImageView.image = UIImage(named: "cake.png")
     }
 }
 
@@ -56,7 +57,6 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         configureCell(cell: cell, indexPath: indexPath)
         cell.indexPath = indexPath
-        //cell.delegate = self
         return cell
     }
 }
