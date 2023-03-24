@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2267E3CF29CA2AD900A2919D /* sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2267E3CD29CA2AD900A2919D /* sunset.jpg */; };
 		2267E3D029CA2AD900A2919D /* plants.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2267E3CE29CA2AD900A2919D /* plants.jpg */; };
+		2267E3D329CBB77B00A2919D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267E3D229CBB77B00A2919D /* ProfileViewController.swift */; };
 		227287072995B5FC00F87CC5 /* IntroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227287062995B5FC00F87CC5 /* IntroStoryboard.storyboard */; };
 		2272870B2995BA8200F87CC5 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2272870A2995BA8200F87CC5 /* TipsViewController.swift */; };
 		2272870E2995BCB100F87CC5 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2272870D2995BCB100F87CC5 /* CalendarViewController.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		2267E3CD29CA2AD900A2919D /* sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpg; sourceTree = "<group>"; };
 		2267E3CE29CA2AD900A2919D /* plants.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plants.jpg; sourceTree = "<group>"; };
+		2267E3D229CBB77B00A2919D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		227287062995B5FC00F87CC5 /* IntroStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroStoryboard.storyboard; sourceTree = "<group>"; };
 		2272870A2995BA8200F87CC5 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		2272870D2995BCB100F87CC5 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2267E3D129CBB75C00A2919D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2267E3D229CBB77B00A2919D /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		227287142997081800F87CC5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 				22F5079E29A6AB61009653A3 /* Dashboard */,
 				22F5079B29A6A446009653A3 /* images */,
 				22F3752029972F04006862F0 /* Calendar */,
+				2267E3D129CBB75C00A2919D /* Profile */,
 				22F3751D2997290A006862F0 /* Settings */,
 				227287142997081800F87CC5 /* TabBar */,
 				22976DF02995B51800DFCE12 /* Introduction */,
@@ -388,6 +399,7 @@
 				227AD72C29941B9700125CE2 /* SceneDelegate.swift in Sources */,
 				227287162997083100F87CC5 /* TabBarController.swift in Sources */,
 				22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */,
+				2267E3D329CBB77B00A2919D /* ProfileViewController.swift in Sources */,
 				22F5079829A67E08009653A3 /* EventDetailViewController.swift in Sources */,
 				2272870E2995BCB100F87CC5 /* CalendarViewController.swift in Sources */,
 				22F507A029A6AB7D009653A3 /* DashboardViewController.swift in Sources */,
