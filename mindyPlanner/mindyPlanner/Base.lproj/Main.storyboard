@@ -72,26 +72,74 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c5T-XI-iHE">
+                                <rect key="frame" x="10" y="113" width="373" height="542"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RemindersCell" id="lDW-Pb-p0g" customClass="RemindersCell" customModule="mindyPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="373" height="100.33333587646484"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lDW-Pb-p0g" id="ALj-q7-uVv">
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="100.33333587646484"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xll-nL-wle">
+                                                    <rect key="frame" x="10" y="10" width="353" height="80.333333333333329"/>
+                                                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="q68-2k-rgK"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gH0-K1-7kg">
+                                                    <rect key="frame" x="20" y="21.000000000000004" width="333" height="58.333333333333343"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gH0-K1-7kg" secondAttribute="trailing" id="Bdh-RP-DLo"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xll-nL-wle" secondAttribute="bottom" constant="10" id="FKx-Wg-VaU"/>
+                                                <constraint firstItem="gH0-K1-7kg" firstAttribute="centerY" secondItem="Xll-nL-wle" secondAttribute="centerY" id="YSR-gx-faw"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xll-nL-wle" secondAttribute="trailing" constant="10" id="bWW-oI-qBd"/>
+                                                <constraint firstItem="Xll-nL-wle" firstAttribute="top" secondItem="ALj-q7-uVv" secondAttribute="top" constant="10" id="i2D-pf-iVe"/>
+                                                <constraint firstItem="Xll-nL-wle" firstAttribute="leading" secondItem="ALj-q7-uVv" secondAttribute="leading" constant="10" id="rPB-Wb-Uha"/>
+                                                <constraint firstItem="gH0-K1-7kg" firstAttribute="top" secondItem="ALj-q7-uVv" secondAttribute="topMargin" constant="10" id="v5D-ab-Dbq"/>
+                                                <constraint firstItem="gH0-K1-7kg" firstAttribute="leading" secondItem="ALj-q7-uVv" secondAttribute="leadingMargin" id="w7U-N1-xOF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="remindersCardView" destination="Xll-nL-wle" id="4ck-tf-7IV"/>
+                                            <outlet property="remindersTitleLabel" destination="gH0-K1-7kg" id="UHw-6d-wIl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="c5T-XI-iHE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="1Ns-f5-J8X"/>
                             <constraint firstAttribute="bottom" secondItem="eT0-uB-de5" secondAttribute="bottom" id="1Xe-05-Lw3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c5T-XI-iHE" secondAttribute="trailing" constant="10" id="API-5h-XGo"/>
+                            <constraint firstItem="eJR-jd-70v" firstAttribute="top" secondItem="c5T-XI-iHE" secondAttribute="bottom" constant="20" id="HuK-sm-Ihk"/>
                             <constraint firstItem="eT0-uB-de5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IBI-Dv-KVm"/>
                             <constraint firstItem="eT0-uB-de5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LTX-rq-EsM"/>
                             <constraint firstItem="eJR-jd-70v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="283" id="VnU-CW-4n1"/>
                             <constraint firstItem="eJR-jd-70v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="572" id="daq-av-0kX"/>
                             <constraint firstAttribute="trailing" secondItem="eT0-uB-de5" secondAttribute="trailing" id="lFP-1a-AJ9"/>
+                            <constraint firstItem="c5T-XI-iHE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="wOh-Jg-O0E"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M9F-8a-Fak"/>
                     <connections>
                         <outlet property="addReminderButton" destination="eJR-jd-70v" id="s1G-oi-LF0"/>
+                        <outlet property="remindersTableView" destination="c5T-XI-iHE" id="vaf-Ne-ZqA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3040" y="-601"/>
+            <point key="canvasLocation" x="3038.9312977099235" y="-601.4084507042254"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="2uZ-wK-vvj">
@@ -220,6 +268,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
