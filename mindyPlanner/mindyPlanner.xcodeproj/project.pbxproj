@@ -29,6 +29,8 @@
 		2292625E29CE2E8F00DBD640 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292625C29CE2E8F00DBD640 /* add.png */; };
 		2292626129CE363F00DBD640 /* ReminderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292626029CE363F00DBD640 /* ReminderDetailViewController.swift */; };
 		2292626329CE364C00DBD640 /* ReminderDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2292626229CE364C00DBD640 /* ReminderDetailStoryboard.storyboard */; };
+		2292626529CF554B00DBD640 /* addReminder.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292626429CF554B00DBD640 /* addReminder.png */; };
+		2292626729CF564A00DBD640 /* creditCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292626629CF564A00DBD640 /* creditCard.png */; };
 		22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22976DEA2995000A00DFCE12 /* IntroViewController.swift */; };
 		22D7C1FE29CDD7CF00D36237 /* RemindersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7C1FD29CDD7CF00D36237 /* RemindersCell.swift */; };
 		22F3751F2997291F006862F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3751E2997291F006862F0 /* SettingsViewController.swift */; };
@@ -83,6 +85,8 @@
 		2292625C29CE2E8F00DBD640 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		2292626029CE363F00DBD640 /* ReminderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewController.swift; sourceTree = "<group>"; };
 		2292626229CE364C00DBD640 /* ReminderDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReminderDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		2292626429CF554B00DBD640 /* addReminder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addReminder.png; sourceTree = "<group>"; };
+		2292626629CF564A00DBD640 /* creditCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creditCard.png; sourceTree = "<group>"; };
 		22976DEA2995000A00DFCE12 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		22D7C1FD29CDD7CF00D36237 /* RemindersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersCell.swift; sourceTree = "<group>"; };
 		22F3751E2997291F006862F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -263,7 +267,9 @@
 			children = (
 				2292625C29CE2E8F00DBD640 /* add.png */,
 				2292625B29CE2E8F00DBD640 /* cake.png */,
+				2292626429CF554B00DBD640 /* addReminder.png */,
 				22F5079C29A6A4BE009653A3 /* dandelion.jpg */,
+				2292626629CF564A00DBD640 /* creditCard.png */,
 				2267E3CE29CA2AD900A2919D /* plants.jpg */,
 				2267E3CD29CA2AD900A2919D /* sunset.jpg */,
 			);
@@ -391,12 +397,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				227AD73629941B9800125CE2 /* LaunchScreen.storyboard in Resources */,
+				2292626729CF564A00DBD640 /* creditCard.png in Resources */,
 				2267E3D029CA2AD900A2919D /* plants.jpg in Resources */,
 				227287102995BCD100F87CC5 /* CalendarStoryboard.storyboard in Resources */,
 				2292625E29CE2E8F00DBD640 /* add.png in Resources */,
 				22F5079D29A6A4BE009653A3 /* dandelion.jpg in Resources */,
 				2267E3CF29CA2AD900A2919D /* sunset.jpg in Resources */,
 				227AD73329941B9800125CE2 /* Assets.xcassets in Resources */,
+				2292626529CF554B00DBD640 /* addReminder.png in Resources */,
 				22F5079429A4FF06009653A3 /* CalendarEventCell.xib in Resources */,
 				22F5079A29A67E1A009653A3 /* EventDetailStoryboard.storyboard in Resources */,
 				227287072995B5FC00F87CC5 /* IntroStoryboard.storyboard in Resources */,
