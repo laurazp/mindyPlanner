@@ -15,9 +15,10 @@ class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemMint
+        //view.backgroundColor = .systemMint
         navigationItem.title = "Calendar"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddButton))
+        navigationItem.rightBarButtonItem?.tintColor = .systemMint
         createCalendar()
         configureTableView()
     }
@@ -54,7 +55,8 @@ class CalendarViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.backgroundColor = .systemMint
+        tableView.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+        //tableView.backgroundColor = .systemMint
         tableView.estimatedRowHeight = 150
         definesPresentationContext = true
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -146,6 +148,7 @@ extension CalendarViewController: UICalendarViewDelegate, UICalendarSelectionSin
         cell.textLabel!.text = calendarEventsData[indexPath.row]
         cell.textLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.bold)
         cell.textLabel?.textColor = UIColor.systemBackground
+        cell.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         return cell
     }
     
