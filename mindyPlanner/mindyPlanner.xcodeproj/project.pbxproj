@@ -27,6 +27,8 @@
 		227AD74D29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD74C29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift */; };
 		2292625D29CE2E8F00DBD640 /* cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292625B29CE2E8F00DBD640 /* cake.png */; };
 		2292625E29CE2E8F00DBD640 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292625C29CE2E8F00DBD640 /* add.png */; };
+		2292626129CE363F00DBD640 /* ReminderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292626029CE363F00DBD640 /* ReminderDetailViewController.swift */; };
+		2292626329CE364C00DBD640 /* ReminderDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2292626229CE364C00DBD640 /* ReminderDetailStoryboard.storyboard */; };
 		22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22976DEA2995000A00DFCE12 /* IntroViewController.swift */; };
 		22D7C1FE29CDD7CF00D36237 /* RemindersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7C1FD29CDD7CF00D36237 /* RemindersCell.swift */; };
 		22F3751F2997291F006862F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3751E2997291F006862F0 /* SettingsViewController.swift */; };
@@ -79,6 +81,8 @@
 		227AD74C29941B9800125CE2 /* mindyPlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindyPlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2292625B29CE2E8F00DBD640 /* cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cake.png; sourceTree = "<group>"; };
 		2292625C29CE2E8F00DBD640 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		2292626029CE363F00DBD640 /* ReminderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewController.swift; sourceTree = "<group>"; };
+		2292626229CE364C00DBD640 /* ReminderDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReminderDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		22976DEA2995000A00DFCE12 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		22D7C1FD29CDD7CF00D36237 /* RemindersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersCell.swift; sourceTree = "<group>"; };
 		22F3751E2997291F006862F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +194,15 @@
 			path = mindyPlannerUITests;
 			sourceTree = "<group>";
 		};
+		2292625F29CE361000DBD640 /* ReminderDetails */ = {
+			isa = PBXGroup;
+			children = (
+				2292626029CE363F00DBD640 /* ReminderDetailViewController.swift */,
+				2292626229CE364C00DBD640 /* ReminderDetailStoryboard.storyboard */,
+			);
+			path = ReminderDetails;
+			sourceTree = "<group>";
+		};
 		22976DF02995B51800DFCE12 /* Introduction */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +275,7 @@
 			children = (
 				22F5079F29A6AB7D009653A3 /* DashboardViewController.swift */,
 				22D7C1FC29CDD79100D36237 /* Cells */,
+				2292625F29CE361000DBD640 /* ReminderDetails */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -388,6 +402,7 @@
 				227287072995B5FC00F87CC5 /* IntroStoryboard.storyboard in Resources */,
 				227AD73129941B9700125CE2 /* Main.storyboard in Resources */,
 				2292625D29CE2E8F00DBD640 /* cake.png in Resources */,
+				2292626329CE364C00DBD640 /* ReminderDetailStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +434,7 @@
 				227AD72C29941B9700125CE2 /* SceneDelegate.swift in Sources */,
 				227287162997083100F87CC5 /* TabBarController.swift in Sources */,
 				22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */,
+				2292626129CE363F00DBD640 /* ReminderDetailViewController.swift in Sources */,
 				2267E3D329CBB77B00A2919D /* ProfileViewController.swift in Sources */,
 				22F5079829A67E08009653A3 /* EventDetailViewController.swift in Sources */,
 				2272870E2995BCB100F87CC5 /* CalendarViewController.swift in Sources */,
