@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="905" y="1340"/>
         </scene>
-        <!--Settings-->
+        <!--Settings View Controller-->
         <scene sceneID="rn6-HO-cHr">
             <objects>
                 <viewController id="g76-we-QbH" customClass="SettingsViewController" customModule="mindyPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,25 +32,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng0-ZH-stW">
-                                <rect key="frame" x="157" y="414" width="79.333333333333314" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dandelion.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="N3z-ar-2WN">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4M5-Mp-yrM"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="ng0-ZH-stW" firstAttribute="centerY" secondItem="y8g-tM-0iI" secondAttribute="centerY" id="LjL-Sp-UNE"/>
-                            <constraint firstItem="ng0-ZH-stW" firstAttribute="centerX" secondItem="y8g-tM-0iI" secondAttribute="centerX" id="z11-YA-sUH"/>
+                            <constraint firstAttribute="bottom" secondItem="N3z-ar-2WN" secondAttribute="bottom" id="Da6-9l-59L"/>
+                            <constraint firstAttribute="trailing" secondItem="N3z-ar-2WN" secondAttribute="trailing" id="HMf-UM-G1z"/>
+                            <constraint firstItem="N3z-ar-2WN" firstAttribute="leading" secondItem="y8g-tM-0iI" secondAttribute="leading" id="qTq-cm-etf"/>
+                            <constraint firstItem="N3z-ar-2WN" firstAttribute="top" secondItem="y8g-tM-0iI" secondAttribute="top" id="zxu-5c-1Qq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="wrench.and.screwdriver" catalog="system" id="42y-0G-eiL"/>
+                    <navigationItem key="navigationItem" id="jzF-8M-dU6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dp-3G-t49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1981" y="947"/>
+            <point key="canvasLocation" x="2907.6335877862593" y="946.47887323943667"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -64,11 +62,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJR-jd-70v">
-                                <rect key="frame" x="283" y="675" width="70" height="70"/>
+                                <rect key="frame" x="283" y="675" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="8F2-Cv-Ssf"/>
-                                    <constraint firstAttribute="height" constant="70" id="MIo-YX-mEP"/>
+                                    <constraint firstAttribute="width" constant="60" id="8F2-Cv-Ssf"/>
+                                    <constraint firstAttribute="height" constant="60" id="MIo-YX-mEP"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Add"/>
                             </button>
@@ -99,8 +98,8 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gH0-K1-7kg">
-                                                            <rect key="frame" x="86" y="18.333333333333336" width="257" height="24"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <rect key="frame" x="86" y="19.333333333333336" width="257" height="21.666666666666664"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -160,12 +159,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunset.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7Ve-b8-k3N">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p1p-Ac-rkR">
                                 <rect key="frame" x="0.0" y="123" width="393" height="626"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulm-E9-VAD" userLabel="Calendar View">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="330"/>
-                                        <color key="backgroundColor" systemColor="systemMintColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="330" id="Wgs-0v-UhH"/>
                                         </constraints>
@@ -178,11 +179,15 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8tT-cR-zyr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
+                            <constraint firstItem="8tT-cR-zyr" firstAttribute="trailing" secondItem="7Ve-b8-k3N" secondAttribute="trailing" id="0XB-Bp-qZg"/>
+                            <constraint firstAttribute="top" secondItem="7Ve-b8-k3N" secondAttribute="top" id="5sy-bn-2vS"/>
                             <constraint firstItem="p1p-Ac-rkR" firstAttribute="leading" secondItem="8tT-cR-zyr" secondAttribute="leading" id="Br7-TS-dTl"/>
+                            <constraint firstAttribute="bottom" secondItem="7Ve-b8-k3N" secondAttribute="bottom" id="Ciy-4O-eRV"/>
                             <constraint firstItem="p1p-Ac-rkR" firstAttribute="top" secondItem="8tT-cR-zyr" secondAttribute="top" constant="20" id="FXH-tH-LtU"/>
                             <constraint firstItem="8tT-cR-zyr" firstAttribute="trailing" secondItem="p1p-Ac-rkR" secondAttribute="trailing" id="KV2-y3-iLS"/>
+                            <constraint firstItem="7Ve-b8-k3N" firstAttribute="leading" secondItem="8tT-cR-zyr" secondAttribute="leading" id="Ydy-xY-Dzx"/>
                             <constraint firstItem="8tT-cR-zyr" firstAttribute="bottom" secondItem="p1p-Ac-rkR" secondAttribute="bottom" constant="20" id="xAa-SV-U04"/>
                         </constraints>
                     </view>
@@ -211,7 +216,7 @@
                     <connections>
                         <segue destination="p8e-GJ-ryq" kind="relationship" relationship="viewControllers" id="wx4-t5-Bln"/>
                         <segue destination="gqh-IK-A3z" kind="relationship" relationship="viewControllers" id="mNm-xb-bhg"/>
-                        <segue destination="g76-we-QbH" kind="relationship" relationship="viewControllers" id="6pf-wq-WyI"/>
+                        <segue destination="apM-mq-gmE" kind="relationship" relationship="viewControllers" id="6pf-wq-WyI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eje-Q0-Ltv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -259,11 +264,32 @@
             </objects>
             <point key="canvasLocation" x="1982" y="-601"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="J38-CP-fJE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="apM-mq-gmE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="wrench.and.screwdriver" catalog="system" id="42y-0G-eiL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PDX-Xd-bs2">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g76-we-QbH" kind="relationship" relationship="rootViewController" id="SBI-vO-Wxd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ha7-SY-FE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980.916030534351" y="946.47887323943667"/>
+        </scene>
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="dandelion.jpg" width="4000" height="2667"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="plants.jpg" width="2400" height="3634"/>
+        <image name="sunset.jpg" width="1920" height="2899"/>
         <image name="wrench.and.screwdriver" catalog="system" width="128" height="119"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -276,9 +302,6 @@
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
