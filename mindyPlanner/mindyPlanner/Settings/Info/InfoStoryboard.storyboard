@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--InfoStoryboard-->
+        <!--Info View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="InfoViewController" title="InfoStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="InfoViewController" customModule="mindyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="InfoViewController" customModule="mindyPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,29 +25,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="101" translatesAutoresizingMaskIntoConstraints="NO" id="Nck-H5-Rid" userLabel="InfoStackView">
-                                <rect key="frame" x="30" y="119" width="333" height="679"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Nck-H5-Rid" userLabel="InfoStackView">
+                                <rect key="frame" x="30" y="119.00000000000001" width="333" height="156.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKc-00-t9R">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="94"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5C-ht-y5h">
-                                        <rect key="frame" x="0.0" y="195" width="333" height="94"/>
+                                        <rect key="frame" x="0.0" y="45.333333333333343" width="333" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep3-Af-TZJ">
-                                        <rect key="frame" x="0.0" y="390" width="333" height="94"/>
+                                        <rect key="frame" x="0.0" y="90.666666666666657" width="333" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udq-mg-hmo">
-                                        <rect key="frame" x="0.0" y="585" width="333" height="94"/>
+                                        <rect key="frame" x="0.0" y="136" width="333" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -64,7 +64,6 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Nck-H5-Rid" secondAttribute="trailing" constant="30" id="OFk-ph-vbt"/>
                             <constraint firstItem="JT8-u8-gmy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="bAk-oF-TPY"/>
                             <constraint firstItem="JT8-u8-gmy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ued-f0-qDA"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Nck-H5-Rid" secondAttribute="bottom" constant="20" id="zCM-aF-VgK"/>
                         </constraints>
                     </view>
                     <connections>
