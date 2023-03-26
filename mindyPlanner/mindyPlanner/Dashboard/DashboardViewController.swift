@@ -7,12 +7,9 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var remindersTableView: UITableView!
     @IBOutlet weak var addReminderButton: UIButton!
+    
     var remindersList: [String] = ["Cumpleaños María", "Aniversario papis", "Renovar DNI"]
-    
-    
-    let eventStore = EKEventStore()
-    
-    
+    //let eventStore = EKEventStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,33 +36,37 @@ class DashboardViewController: UIViewController {
     }
 
     @objc func addReminderButtonPressed() {
-        print("Add Reminder Button pressed")
-        
-        eventStore.requestAccess(to: .event) { [weak self] success, error in
-            if success, error == nil {
-                DispatchQueue.main.async {
-                    guard let store = self?.eventStore else { return }
-                    let eventViewController = EKEventEditViewController()
-                    eventViewController.eventStore = store
-                    eventViewController.editViewDelegate = self
-                    
-                    let newEvent = EKEvent(eventStore: store)
-                    //TODO: Change date depending on selected date from user
-                    newEvent.startDate = Date()
-                    newEvent.endDate = Date()
-                     //Save the event
-                    do {
-                        try store.save(newEvent, span: .thisEvent, commit: true)
-                        //TODO: TableView se debería actualizar al añadir un evento !!
-                         
-                    } catch let err as NSError{
-                        print ("An error occured \(err.description)")
-                    }
-                    eventViewController.event = newEvent
-                    self?.present(eventViewController, animated: true, completion: nil)
-                }
-            }
+        let storyboard = UIStoryboard(name: "ReminderEventStoryboard", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "ReminderEventViewController") as? ReminderEventViewController {
+            let navController = UINavigationController(rootViewController: viewController)
+            navigationController?.present(navController, animated: true)
         }
+        
+//        eventStore.requestAccess(to: .event) { [weak self] success, error in
+//            if success, error == nil {
+//                DispatchQueue.main.async {
+//                    guard let store = self?.eventStore else { return }
+//                    let eventViewController = EKEventEditViewController()
+//                    eventViewController.eventStore = store
+//                    eventViewController.editViewDelegate = self
+//
+//                    let newEvent = EKEvent(eventStore: store)
+//                    //TODO: Change date depending on selected date from user
+//                    newEvent.startDate = Date()
+//                    newEvent.endDate = Date()
+//                     //Save the event
+//                    do {
+//                        try store.save(newEvent, span: .thisEvent, commit: true)
+//                        //TODO: TableView se debería actualizar al añadir un evento !!
+//
+//                    } catch let err as NSError{
+//                        print ("An error occured \(err.description)")
+//                    }
+//                    eventViewController.event = newEvent
+//                    self?.present(eventViewController, animated: true, completion: nil)
+//                }
+//            }
+//        }
     }
     
     private func configureCell(cell: RemindersCell, indexPath: IndexPath) {
