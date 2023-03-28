@@ -11,14 +11,38 @@ class ReminderEventViewController: UIViewController {
     @IBOutlet weak var repeatMenuButton: UIButton!
     
     private var currentUserRepeatingOption: Int = 0
-    let repeatButtonOptions = ["Never", "Every Day", "Every Week", "Every Two Weeks", "Every Month", "Every Year", "Custom"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureRepeatMenu()
         setupNavBar()
         setupViews()
-        let interaction = UIContextMenuInteraction(delegate: self)
-        repeatMenuButton.addInteraction(interaction)
+    }
+    
+    func configureRepeatMenu() {
+        var menuItems: [UIAction] {
+            return [
+                UIAction(title: "Custom", handler: updateRepeatOption),
+                UIAction(title: "Every Year", handler: updateRepeatOption),
+                UIAction(title: "Every Month", handler: updateRepeatOption),
+                UIAction(title: "Every Two Weeks", handler: updateRepeatOption),
+                UIAction(title: "Every Week", handler: updateRepeatOption),
+                UIAction(title: "Every Day", handler: updateRepeatOption),
+                UIAction(title: "Never", handler: updateRepeatOption)
+            ]
+        }
+        
+        var repeatMenu: UIMenu {
+            return UIMenu(title: "Choose an option...", image: nil, identifier: nil, options: [], children: menuItems)
+        }
+        repeatMenuButton.menu = repeatMenu
+        repeatMenuButton.showsMenuAsPrimaryAction = true
+    }
+    
+    func updateRepeatOption(from action: UIAction) {
+        repeatMenuButton.setTitle(action.title, for: .normal)
+        //TODO: Do whatever is needed for every Repeating option
+        
     }
     
     private func setupNavBar() {
@@ -58,46 +82,5 @@ class ReminderEventViewController: UIViewController {
     @objc func addButtonPressed() {
         //TODO: Save Reminder and show it on Dashboard
         self.dismiss(animated: true, completion: nil)
-    }
-}
-
-// MARK: - UIContextMenuInteractionDelegate
-extension ReminderEventViewController: UIContextMenuInteractionDelegate {
-    
-    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
-        return UIContextMenuConfiguration(
-            identifier: nil,
-            previewProvider: nil,
-            actionProvider: { _ in
-                let repeatMenu = self.makeRepeatMenu()
-                let children = [repeatMenu]
-                return UIMenu(title: "", children: children)
-            })
-    }
- 
-    func updateRepeatOption(from action: UIAction) {
-        guard let number = Int(action.identifier.rawValue) else {
-            return
-        }
-        currentUserRepeatingOption = number
-        let selectedOption = repeatButtonOptions[number - 1]
-        repeatMenuButton.setTitle(selectedOption, for: .normal)
-        //TODO: Do whatever is needed for every Repeating option
-    }
-    
-    func makeRepeatMenu() -> UIMenu {
-        let repeatActions = repeatButtonOptions
-            .enumerated()
-            .map { index, title in
-                return UIAction(
-                    title: title,
-                    identifier: UIAction.Identifier("\(index + 1)"),
-                    handler: updateRepeatOption)
-            }
-        
-        return UIMenu(
-            title: "Choose an option...",
-            options: .displayInline,
-            children: repeatActions)
     }
 }
