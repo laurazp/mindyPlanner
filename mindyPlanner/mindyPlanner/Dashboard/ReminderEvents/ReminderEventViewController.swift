@@ -8,11 +8,17 @@ class ReminderEventViewController: UIViewController {
     @IBOutlet weak var allDayStackView: UIStackView!
     @IBOutlet weak var startDateStackView: UIStackView!
     @IBOutlet weak var endDateStackView: UIStackView!
-
+    @IBOutlet weak var repeatMenuButton: UIButton!
+    
+    private var currentUserRepeatingOption: Int = 0
+    let repeatButtonOptions = ["Never", "Every Day", "Every Week", "Every Two Weeks", "Every Month", "Every Year", "Custom"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupViews()
+        let interaction = UIContextMenuInteraction(delegate: self)
+        repeatMenuButton.addInteraction(interaction)
     }
     
     private func setupNavBar() {
@@ -52,5 +58,46 @@ class ReminderEventViewController: UIViewController {
     @objc func addButtonPressed() {
         //TODO: Save Reminder and show it on Dashboard
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - UIContextMenuInteractionDelegate
+extension ReminderEventViewController: UIContextMenuInteractionDelegate {
+    
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: nil,
+            actionProvider: { _ in
+                let repeatMenu = self.makeRepeatMenu()
+                let children = [repeatMenu]
+                return UIMenu(title: "", children: children)
+            })
+    }
+ 
+    func updateRepeatOption(from action: UIAction) {
+        guard let number = Int(action.identifier.rawValue) else {
+            return
+        }
+        currentUserRepeatingOption = number
+        let selectedOption = repeatButtonOptions[number - 1]
+        repeatMenuButton.setTitle(selectedOption, for: .normal)
+        //TODO: Do whatever is needed for every Repeating option
+    }
+    
+    func makeRepeatMenu() -> UIMenu {
+        let repeatActions = repeatButtonOptions
+            .enumerated()
+            .map { index, title in
+                return UIAction(
+                    title: title,
+                    identifier: UIAction.Identifier("\(index + 1)"),
+                    handler: updateRepeatOption)
+            }
+        
+        return UIMenu(
+            title: "Choose an option...",
+            options: .displayInline,
+            children: repeatActions)
     }
 }

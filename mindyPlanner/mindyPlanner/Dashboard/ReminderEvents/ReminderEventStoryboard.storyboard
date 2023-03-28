@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -123,12 +122,20 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Kkf-JC-3iH" userLabel="Repeat Stack View">
                                 <rect key="frame" x="20" y="386" width="353" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJM-uo-51A" userLabel="Repeat Label">
-                                        <rect key="frame" x="16" y="12.333333333333313" width="321" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJM-uo-51A" userLabel="Repeat Label">
+                                        <rect key="frame" x="16" y="12.333333333333313" width="147" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z3-Wt-dbM">
+                                        <rect key="frame" x="167" y="8" width="170" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="pFb-I5-TLw"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Never"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -136,6 +143,11 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="scu-zE-17p"/>
                                 </constraints>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="16"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7Xj-Kr-XRu" userLabel="Alert Stack View">
                                 <rect key="frame" x="20" y="466" width="353" height="45"/>
@@ -153,6 +165,11 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="cjf-uT-O5Q"/>
                                 </constraints>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="16"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -176,18 +193,12 @@
                         <outlet property="allDayStackView" destination="e8Q-gW-9dz" id="24z-C9-8ar"/>
                         <outlet property="endDateStackView" destination="ZgP-yC-Ixq" id="iCl-pg-c97"/>
                         <outlet property="locationTextView" destination="SEn-dE-tfo" id="Af0-x5-tZc"/>
+                        <outlet property="repeatMenuButton" destination="7Z3-Wt-dbM" id="SWE-41-VAA"/>
                         <outlet property="startDateStackView" destination="sF6-6a-8Ch" id="mNL-6B-33d"/>
                         <outlet property="titleTextView" destination="Nab-0R-3H3" id="YZA-Lg-vwa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <menu title="Inline Menu" id="h4K-qJ-Ar3">
-                    <menuOptions key="menuOptions" displayInline="YES"/>
-                    <children>
-                        <command title="Item 1" id="FdU-Ur-wUK"/>
-                        <command title="Item 2" id="ZzV-FO-fZ3"/>
-                    </children>
-                </menu>
             </objects>
             <point key="canvasLocation" x="65" y="-34"/>
         </scene>
