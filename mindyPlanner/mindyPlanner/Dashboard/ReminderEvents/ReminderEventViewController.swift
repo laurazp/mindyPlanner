@@ -10,6 +10,7 @@ class ReminderEventViewController: UIViewController {
     @IBOutlet weak var endDateStackView: UIStackView!
     @IBOutlet weak var repeatMenuButton: UIButton!
     @IBOutlet weak var alertMenuButton: UIButton!
+    @IBOutlet weak var notesTextView: UITextView!
     
     private var currentUserRepeatingOption: Int = 0
     
@@ -101,6 +102,10 @@ class ReminderEventViewController: UIViewController {
         allDayStackView.layer.cornerRadius = 10
         startDateStackView.layer.cornerRadius = 10
         endDateStackView.layer.cornerRadius = 10
+        notesTextView.delegate = self
+        notesTextView.layer.cornerRadius = 11
+        notesTextView.text = "Notes"
+        notesTextView.textColor = UIColor.lightGray
     }
     
     @objc func cancelButtonPressed() {
@@ -110,5 +115,33 @@ class ReminderEventViewController: UIViewController {
     @objc func addButtonPressed() {
         //TODO: Save Reminder and show it on Dashboard
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension ReminderEventViewController: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let currentText : String = textView.text
+        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: text)
+
+        if updatedText.isEmpty {
+            textView.text = "Notes"
+            textView.textColor = UIColor.lightGray
+            textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+        } else if textView.textColor == UIColor.lightGray && !text.isEmpty {
+            textView.textColor = UIColor.black
+            textView.text = text
+        } else {
+            return true
+        }
+        return false
+    }
+    
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        if self.view.window != nil {
+            if textView.textColor == UIColor.lightGray {
+                textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+            }
+        }
     }
 }

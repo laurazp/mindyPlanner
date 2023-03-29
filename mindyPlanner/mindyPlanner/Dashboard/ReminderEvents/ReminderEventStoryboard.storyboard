@@ -179,6 +179,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="avf-JH-DWI" customClass="TextViewWithPadding" customModule="mindyPlanner" customModuleProvider="target">
+                                <rect key="frame" x="20" y="546" width="353" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="r0S-rF-swS"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -188,13 +198,16 @@
                             <constraint firstItem="gQt-z3-ADB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="Apl-zA-KbV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gQt-z3-ADB" secondAttribute="trailing" constant="20" id="C2t-Hn-Q3s"/>
                             <constraint firstItem="7Xj-Kr-XRu" firstAttribute="top" secondItem="Kkf-JC-3iH" secondAttribute="bottom" constant="35" id="L2n-Tq-MWo"/>
+                            <constraint firstItem="avf-JH-DWI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Lbh-9V-O18"/>
                             <constraint firstItem="hte-Iq-hzO" firstAttribute="top" secondItem="gQt-z3-ADB" secondAttribute="bottom" constant="35" id="OtN-F5-Eh3"/>
                             <constraint firstItem="Kkf-JC-3iH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="QCG-o8-3XX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7Xj-Kr-XRu" secondAttribute="trailing" constant="20" id="boM-Vh-KKe"/>
                             <constraint firstItem="hte-Iq-hzO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="efx-bl-DGh"/>
+                            <constraint firstItem="avf-JH-DWI" firstAttribute="top" secondItem="7Xj-Kr-XRu" secondAttribute="bottom" constant="35" id="fUm-t5-Lzb"/>
                             <constraint firstItem="7Xj-Kr-XRu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="hpN-PT-csh"/>
                             <constraint firstItem="gQt-z3-ADB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="kpF-cW-bMV"/>
                             <constraint firstItem="Kkf-JC-3iH" firstAttribute="top" secondItem="hte-Iq-hzO" secondAttribute="bottom" constant="35" id="oh8-KR-mTg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="avf-JH-DWI" secondAttribute="trailing" constant="20" id="yRt-vU-aPv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -202,6 +215,7 @@
                         <outlet property="allDayStackView" destination="e8Q-gW-9dz" id="24z-C9-8ar"/>
                         <outlet property="endDateStackView" destination="ZgP-yC-Ixq" id="iCl-pg-c97"/>
                         <outlet property="locationTextView" destination="SEn-dE-tfo" id="Af0-x5-tZc"/>
+                        <outlet property="notesTextView" destination="avf-JH-DWI" id="G6B-pR-ufy"/>
                         <outlet property="repeatMenuButton" destination="7Z3-Wt-dbM" id="SWE-41-VAA"/>
                         <outlet property="startDateStackView" destination="sF6-6a-8Ch" id="mNL-6B-33d"/>
                         <outlet property="titleTextView" destination="Nab-0R-3H3" id="YZA-Lg-vwa"/>
@@ -213,6 +227,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
