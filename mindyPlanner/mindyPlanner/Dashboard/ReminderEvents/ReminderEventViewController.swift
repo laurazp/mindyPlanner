@@ -9,18 +9,20 @@ class ReminderEventViewController: UIViewController {
     @IBOutlet weak var startDateStackView: UIStackView!
     @IBOutlet weak var endDateStackView: UIStackView!
     @IBOutlet weak var repeatMenuButton: UIButton!
+    @IBOutlet weak var alertMenuButton: UIButton!
     
     private var currentUserRepeatingOption: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureRepeatMenu()
+        configureAlertMenu()
         setupNavBar()
         setupViews()
     }
     
     func configureRepeatMenu() {
-        var menuItems: [UIAction] {
+        var repeatMenuItems: [UIAction] {
             return [
                 UIAction(title: "Custom", handler: updateRepeatOption),
                 UIAction(title: "Every Year", handler: updateRepeatOption),
@@ -33,7 +35,7 @@ class ReminderEventViewController: UIViewController {
         }
         
         var repeatMenu: UIMenu {
-            return UIMenu(title: "Choose an option...", image: nil, identifier: nil, options: [], children: menuItems)
+            return UIMenu(title: "Choose an option...", image: nil, identifier: nil, options: [], children: repeatMenuItems)
         }
         repeatMenuButton.menu = repeatMenu
         repeatMenuButton.showsMenuAsPrimaryAction = true
@@ -42,6 +44,32 @@ class ReminderEventViewController: UIViewController {
     func updateRepeatOption(from action: UIAction) {
         repeatMenuButton.setTitle(action.title, for: .normal)
         //TODO: Do whatever is needed for every Repeating option
+        
+    }
+    
+    func configureAlertMenu() {
+        var alertMenuItems: [UIAction] {
+            return [
+                UIAction(title: "1 day before", handler: updateAlertOption),
+                UIAction(title: "1 hour before", handler: updateAlertOption),
+                UIAction(title: "30 minutes before", handler: updateAlertOption),
+                UIAction(title: "15 minutes before", handler: updateAlertOption),
+                UIAction(title: "5 minutes before", handler: updateAlertOption),
+                UIAction(title: "At time of event", handler: updateAlertOption),
+                UIAction(title: "None", handler: updateAlertOption)
+            ]
+        }
+        
+        var alertMenu: UIMenu {
+            return UIMenu(title: "Choose an alert...", image: nil, identifier: nil, options: [], children: alertMenuItems)
+        }
+        alertMenuButton.menu = alertMenu
+        alertMenuButton.showsMenuAsPrimaryAction = true
+    }
+    
+    func updateAlertOption(from action: UIAction) {
+        alertMenuButton.setTitle(action.title, for: .normal)
+        //TODO: Do whatever is needed for every Alert option
         
     }
     
