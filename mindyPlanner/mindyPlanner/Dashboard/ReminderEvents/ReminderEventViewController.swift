@@ -3,8 +3,8 @@ import UIKit
 
 class ReminderEventViewController: UIViewController {
     
-    @IBOutlet weak var titleTextView: UITextField!
-    @IBOutlet weak var locationTextView: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var allDayStackView: UIStackView!
     @IBOutlet weak var startDateStackView: UIStackView!
     @IBOutlet weak var endDateStackView: UIStackView!
@@ -91,14 +91,14 @@ class ReminderEventViewController: UIViewController {
     }
     
     private func setupViews() {
-        titleTextView.layer.cornerRadius = 11
-        titleTextView.layer.masksToBounds = true
-        titleTextView.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: titleTextView.frame.height))
-        titleTextView.leftViewMode = .always
-        locationTextView.layer.cornerRadius = 11
-        locationTextView.layer.masksToBounds = true
-        locationTextView.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: locationTextView.frame.height))
-        locationTextView.leftViewMode = .always
+        titleTextField.layer.cornerRadius = 11
+        titleTextField.layer.masksToBounds = true
+        titleTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: titleTextField.frame.height))
+        titleTextField.leftViewMode = .always
+        locationTextField.layer.cornerRadius = 11
+        locationTextField.layer.masksToBounds = true
+        locationTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: locationTextField.frame.height))
+        locationTextField.leftViewMode = .always
         allDayStackView.layer.cornerRadius = 10
         startDateStackView.layer.cornerRadius = 10
         endDateStackView.layer.cornerRadius = 10

@@ -214,11 +214,11 @@
                         <outlet property="alertMenuButton" destination="h1r-an-8VQ" id="WUN-AR-iVU"/>
                         <outlet property="allDayStackView" destination="e8Q-gW-9dz" id="24z-C9-8ar"/>
                         <outlet property="endDateStackView" destination="ZgP-yC-Ixq" id="iCl-pg-c97"/>
-                        <outlet property="locationTextView" destination="SEn-dE-tfo" id="Af0-x5-tZc"/>
+                        <outlet property="locationTextField" destination="SEn-dE-tfo" id="slo-Uf-lUW"/>
                         <outlet property="notesTextView" destination="avf-JH-DWI" id="G6B-pR-ufy"/>
                         <outlet property="repeatMenuButton" destination="7Z3-Wt-dbM" id="SWE-41-VAA"/>
                         <outlet property="startDateStackView" destination="sF6-6a-8Ch" id="mNL-6B-33d"/>
-                        <outlet property="titleTextView" destination="Nab-0R-3H3" id="YZA-Lg-vwa"/>
+                        <outlet property="titleTextField" destination="Nab-0R-3H3" id="sUx-PM-R3Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
