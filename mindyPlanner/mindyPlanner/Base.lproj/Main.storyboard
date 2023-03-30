@@ -35,16 +35,50 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dandelion.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="N3z-ar-2WN">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pA-mw-0gR">
+                                <rect key="frame" x="30" y="168" width="333" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ljm-Bl-VhC"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4w-dl-5KF">
+                                <rect key="frame" x="50" y="183" width="293" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPN-gH-KrM">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yQp-G4-nfl">
+                                        <rect key="frame" x="244" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="didTapMusicSwitch" destination="g76-we-QbH" eventType="touchUpInside" id="ugt-zv-dpa"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4M5-Mp-yrM"/>
                         <constraints>
+                            <constraint firstItem="F4w-dl-5KF" firstAttribute="top" secondItem="4M5-Mp-yrM" secondAttribute="top" constant="80" id="2Xa-Go-eew"/>
                             <constraint firstAttribute="bottom" secondItem="N3z-ar-2WN" secondAttribute="bottom" id="Da6-9l-59L"/>
                             <constraint firstAttribute="trailing" secondItem="N3z-ar-2WN" secondAttribute="trailing" id="HMf-UM-G1z"/>
+                            <constraint firstItem="4M5-Mp-yrM" firstAttribute="trailing" secondItem="4pA-mw-0gR" secondAttribute="trailing" constant="30" id="ODD-mf-4Ev"/>
+                            <constraint firstItem="4M5-Mp-yrM" firstAttribute="trailing" secondItem="F4w-dl-5KF" secondAttribute="trailing" constant="50" id="ZFZ-tv-XnL"/>
+                            <constraint firstItem="4pA-mw-0gR" firstAttribute="top" secondItem="4M5-Mp-yrM" secondAttribute="top" constant="65" id="cPG-9K-6Rj"/>
+                            <constraint firstItem="4pA-mw-0gR" firstAttribute="leading" secondItem="4M5-Mp-yrM" secondAttribute="leading" constant="30" id="eQ5-34-tQ8"/>
                             <constraint firstItem="N3z-ar-2WN" firstAttribute="leading" secondItem="y8g-tM-0iI" secondAttribute="leading" id="qTq-cm-etf"/>
+                            <constraint firstItem="F4w-dl-5KF" firstAttribute="leading" secondItem="4M5-Mp-yrM" secondAttribute="leading" constant="50" id="tsn-f4-2p8"/>
                             <constraint firstItem="N3z-ar-2WN" firstAttribute="top" secondItem="y8g-tM-0iI" secondAttribute="top" id="zxu-5c-1Qq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jzF-8M-dU6"/>
+                    <connections>
+                        <outlet property="musicCardView" destination="4pA-mw-0gR" id="OTw-PO-GyA"/>
+                        <outlet property="musicSwitch" destination="yQp-G4-nfl" id="hZR-g7-g1u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dp-3G-t49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

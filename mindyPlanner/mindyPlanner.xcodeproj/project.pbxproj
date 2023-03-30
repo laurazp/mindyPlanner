@@ -36,6 +36,7 @@
 		2292626F29CF8E6300DBD640 /* ReminderEventStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2292626E29CF8E6300DBD640 /* ReminderEventStoryboard.storyboard */; };
 		2292627129CF8E8900DBD640 /* ReminderEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292627029CF8E8900DBD640 /* ReminderEventViewController.swift */; };
 		2292627629D47F8000DBD640 /* TextViewWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292627529D47F8000DBD640 /* TextViewWithPadding.swift */; };
+		2292627A29D5EAAB00DBD640 /* chilled-acoustic-indie-folk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2292627929D5EAAB00DBD640 /* chilled-acoustic-indie-folk.mp3 */; };
 		22976DEB2995000A00DFCE12 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22976DEA2995000A00DFCE12 /* IntroViewController.swift */; };
 		22D7C1FE29CDD7CF00D36237 /* RemindersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7C1FD29CDD7CF00D36237 /* RemindersCell.swift */; };
 		22F3751F2997291F006862F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3751E2997291F006862F0 /* SettingsViewController.swift */; };
@@ -97,6 +98,7 @@
 		2292626E29CF8E6300DBD640 /* ReminderEventStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReminderEventStoryboard.storyboard; sourceTree = "<group>"; };
 		2292627029CF8E8900DBD640 /* ReminderEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEventViewController.swift; sourceTree = "<group>"; };
 		2292627529D47F8000DBD640 /* TextViewWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPadding.swift; sourceTree = "<group>"; };
+		2292627929D5EAAB00DBD640 /* chilled-acoustic-indie-folk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chilled-acoustic-indie-folk.mp3"; sourceTree = "<group>"; };
 		22976DEA2995000A00DFCE12 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		22D7C1FD29CDD7CF00D36237 /* RemindersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersCell.swift; sourceTree = "<group>"; };
 		22F3751E2997291F006862F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				2292627229D06CCC00DBD640 /* CustomElements */,
 				22F5079E29A6AB61009653A3 /* Dashboard */,
 				22F5079B29A6A446009653A3 /* images */,
+				2292627B29D5EAB300DBD640 /* audio */,
 				22F3752029972F04006862F0 /* Calendar */,
 				2267E3D129CBB75C00A2919D /* Profile */,
 				22F3751D2997290A006862F0 /* Settings */,
@@ -242,6 +245,14 @@
 				2292627529D47F8000DBD640 /* TextViewWithPadding.swift */,
 			);
 			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		2292627B29D5EAB300DBD640 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				2292627929D5EAAB00DBD640 /* chilled-acoustic-indie-folk.mp3 */,
+			);
+			path = audio;
 			sourceTree = "<group>";
 		};
 		22976DF02995B51800DFCE12 /* Introduction */ = {
@@ -438,6 +449,7 @@
 				227AD73629941B9800125CE2 /* LaunchScreen.storyboard in Resources */,
 				2292626729CF564A00DBD640 /* creditCard.png in Resources */,
 				2267E3D029CA2AD900A2919D /* plants.jpg in Resources */,
+				2292627A29D5EAAB00DBD640 /* chilled-acoustic-indie-folk.mp3 in Resources */,
 				2292626F29CF8E6300DBD640 /* ReminderEventStoryboard.storyboard in Resources */,
 				227287102995BCD100F87CC5 /* CalendarStoryboard.storyboard in Resources */,
 				2292625E29CE2E8F00DBD640 /* add.png in Resources */,
