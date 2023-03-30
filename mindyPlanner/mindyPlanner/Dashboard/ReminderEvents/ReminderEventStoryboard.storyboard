@@ -213,6 +213,7 @@
                     <connections>
                         <outlet property="alertMenuButton" destination="h1r-an-8VQ" id="WUN-AR-iVU"/>
                         <outlet property="allDayStackView" destination="e8Q-gW-9dz" id="24z-C9-8ar"/>
+                        <outlet property="allDaySwitch" destination="DOG-de-Bgn" id="LDN-M2-vKC"/>
                         <outlet property="endDateStackView" destination="ZgP-yC-Ixq" id="iCl-pg-c97"/>
                         <outlet property="locationTextField" destination="SEn-dE-tfo" id="slo-Uf-lUW"/>
                         <outlet property="notesTextView" destination="avf-JH-DWI" id="G6B-pR-ufy"/>

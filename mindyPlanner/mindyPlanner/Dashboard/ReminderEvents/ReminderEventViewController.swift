@@ -6,6 +6,7 @@ class ReminderEventViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var allDayStackView: UIStackView!
+    @IBOutlet weak var allDaySwitch: UISwitch!
     @IBOutlet weak var startDateStackView: UIStackView!
     @IBOutlet weak var endDateStackView: UIStackView!
     @IBOutlet weak var repeatMenuButton: UIButton!
@@ -100,6 +101,7 @@ class ReminderEventViewController: UIViewController {
         locationTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: locationTextField.frame.height))
         locationTextField.leftViewMode = .always
         allDayStackView.layer.cornerRadius = 10
+        allDaySwitch.isOn = false
         startDateStackView.layer.cornerRadius = 10
         endDateStackView.layer.cornerRadius = 10
         notesTextView.delegate = self
