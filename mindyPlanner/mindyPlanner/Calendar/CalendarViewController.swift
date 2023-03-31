@@ -27,6 +27,12 @@ class CalendarViewController: UIViewController {
         super.viewDidLayoutSubviews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let nav = self.navigationController?.navigationBar
+        nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+    
     private func createCalendar() {
         calendarView.translatesAutoresizingMaskIntoConstraints = false
         calendarView.calendar = Calendar(identifier: .gregorian)
